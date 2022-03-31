@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>loginscreen</ion-title> -->
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaulthref="login" text="">
+
+    </ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <ion-img src="/assets/images/header1.png">
+    </ion-img>
+  </ion-card>
+  <ion-card-content>
+    <div class="wrapform">
+      <ion-item>
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="text" name="email" [(ngModel)]="email" placeholder="Email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" name="password" placeholder="********" [(ngModel)]="password" required>
+        </ion-input>
+      </ion-item>
+    </div>
+    <div class="password_forgot">
+      <ion-button fill="clear" class="ion-no-padding">Mot de passe oublié</ion-button>
+    </div>
+    <div class="sign-button-wrap">
+      <ion-button shape="round" fill="solid" class="sign-button">Login</ion-button>
+    </div>
+  </ion-card-content>
+</ion-content>
