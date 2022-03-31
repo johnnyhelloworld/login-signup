@@ -14,15 +14,17 @@
     <ion-img src="/assets/images/header1.png">
     </ion-img>
   </ion-card>
+
   <ion-card-content>
     <div class="wrapform">
       <ion-item>
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input type="text" name="email" [(ngModel)]="email" placeholder="Email" required></ion-input>
+        <ion-input type="text" name="email" [(ngModel)]="email" placeholder="Email" required>
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
       </ion-item>
       <ion-item>
-        <ion-icon name="lock-closed-outline"></ion-icon>
         <ion-input type="password" name="password" placeholder="********" [(ngModel)]="password" required>
+          <ion-icon name="lock-closed-outline"></ion-icon>
         </ion-input>
       </ion-item>
     </div>
@@ -30,7 +32,12 @@
       <ion-button fill="clear" class="ion-no-padding">Mot de passe oublié</ion-button>
     </div>
     <div class="sign-button-wrap">
-      <ion-button shape="round" fill="solid" class="sign-button">Login</ion-button>
+      <ion-button shape="round" fill="solid" class="sign-button">Se connecter</ion-button>
     </div>
   </ion-card-content>
+
+  <div class="ion-card-footer">
+    <span>Vous n'avez pas encore de compte ? Créez-en un !</span>
+    <button class="ion-no-padding">Se connecter</button>
+  </div>
 </ion-content>

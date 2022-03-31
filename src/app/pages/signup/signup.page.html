@@ -1,9 +1,46 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>signup</ion-title>
+    <!-- <ion-title>signup</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text="">
+
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="bg-color">
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>
+        S'inscrire
+      </ion-card-title>
+      <ion-card-subtitle>
+        Créer votre compte en remplissant le formulaire
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input name="names" type="text" placeholder="Prénom Nom">
+          <ion-icon name="person-outline">
+          </ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="phone" type="text" placeholder="N° Tel.">
+          <ion-icon name="call-outline">
+          </ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="email" type="text" placeholder="Email">
+          <ion-icon name="mail-outline">
+          </ion-icon>
+        </ion-input>
+      </ion-item>
+      <div class="sign-button-wrap">
+        <ion-button shape="round" fill="solid" class="sign-button">S'inscrire</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
