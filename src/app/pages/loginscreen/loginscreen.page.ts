@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loginscreen',
@@ -22,7 +23,7 @@ export class LoginscreenPage implements OnInit {
 
   validationFormUser: FormGroup;
 
-  constructor(public formbuilder: FormBuilder, public authservice: AuthService) { }
+  constructor(public formbuilder: FormBuilder, public authservice: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.validationFormUser = this.formbuilder.group({
@@ -42,6 +43,7 @@ export class LoginscreenPage implements OnInit {
     try {
       this.authservice.loginFireAuth(value).then( resp => {
         console.log(resp);
+        this.router.navigate(['tabs']);
       });
     } catch(err) {
       console.log(err);
